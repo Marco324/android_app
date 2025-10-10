@@ -18,6 +18,9 @@ class _AndroidContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Android SO');
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Text('Android SO'),
+    );
   }
 }

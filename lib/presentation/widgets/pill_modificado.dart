@@ -33,35 +33,32 @@ class PillModificado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: SizedBox(
-        width: screenWidth - 24,
-        child: Stack(
-          children: [
-            Row(
-              mainAxisAlignment: alignment,
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: color,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  height: height,
-                  width: width,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: leftPillPadding, right: rightPillPadding),
-                    child: pillContent,
-                  ),
+    return SizedBox(
+      width: screenWidth - 24,
+      child: Stack(
+        children: [
+          Row(
+            mainAxisAlignment: alignment,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: color,
+                  borderRadius: BorderRadius.circular(16),
                 ),
-              ],
-            ),
-            imagen != null
-                ? Positioned(top: topImagen, right: rightImagen, left: leftImagen, height: 200, child: imagen!)
-                : SizedBox(),
-          ],
-        ),
+                height: height,
+                width: width,
+                child: Padding(
+                  padding: EdgeInsets.only(left: leftPillPadding, right: rightPillPadding),
+                  child: pillContent,
+                ),
+              ),
+            ],
+          ),
+          imagen != null
+              ? Positioned(top: topImagen, right: rightImagen, left: leftImagen, height: 200, child: imagen!)
+              : SizedBox(),
+        ],
       ),
     );
   }
