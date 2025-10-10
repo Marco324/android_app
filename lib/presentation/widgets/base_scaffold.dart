@@ -29,7 +29,7 @@ class BaseScaffold extends StatelessWidget {
                   leading: Icon(
                     item.icono,
                     color: isSelected
-                        ? Color.fromARGB(255, 51, 184, 110)
+                        ? Color.fromARGB(255, 25, 102, 60)
                         : null,
                   ),
                   title: Text(
@@ -39,7 +39,7 @@ class BaseScaffold extends StatelessWidget {
                           ? FontWeight.bold
                           : FontWeight.normal,
                       color: isSelected
-                          ? Color.fromARGB(255, 51, 184, 110)
+                          ? Color.fromARGB(255, 25, 102, 60)
                           : null,
                     ),
                   ),
@@ -64,8 +64,8 @@ class BaseScaffold extends StatelessWidget {
 }
 
 final List<MenuItem> drawerItems = [
-  MenuItem(icono: Icons.home, nombre: 'Android', ruta: '/'),
-  MenuItem(icono: Icons.people, nombre: 'Presentación', ruta: '/presentacion'),
+  MenuItem(icono: Icons.people, nombre: 'Presentación', ruta: '/'),
+  MenuItem(icono: Icons.home, nombre: 'Inicio', ruta: '/presentacion'),
   MenuItem(icono: Icons.android, nombre: 'Android SO', ruta: '/android'),
   MenuItem(icono: Icons.widgets, nombre: 'Componentes', ruta: '/componentes'),
   MenuItem(icono: Icons.category, nombre: 'Clasificación', ruta: '/clasificacion'),

@@ -1,3 +1,4 @@
+import 'package:android_app/presentation/views/home_screen.dart';
 import 'package:android_app/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -7,12 +8,12 @@ class PresentacionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(title: 'Presentación', content: _PresentacionScreen());
+    return BaseScaffold(title: 'Inicio', content: HomeScreenView());
   }
 }
 
-class _PresentacionScreen extends StatelessWidget {
-  const _PresentacionScreen();
+class PresentacionScreenView extends StatelessWidget {
+  const PresentacionScreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +180,7 @@ class _Integrantes extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 12),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(129, 221, 255, 0),
+                    color: Color.fromARGB(96, 221, 255, 0),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Padding(
@@ -245,7 +246,7 @@ class _Integrantes extends StatelessWidget {
                                           ),
                                     ),
                                     TextSpan(
-                                      text: integrante.porcentaje
+                                      text: '${integrante.porcentaje}%'
                                           .toString(),
                                     ),
                                   ],
