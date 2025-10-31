@@ -1,4 +1,3 @@
-import 'package:android_app/presentation/views/home_screen.dart';
 import 'package:android_app/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +7,7 @@ class PresentacionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(title: 'Inicio', content: HomeScreenView());
+    return BaseScaffold(title: 'Inicio', content: PresentacionScreenView());
   }
 }
 
@@ -24,7 +23,7 @@ class PresentacionScreenView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Image(image: AssetImage('assets/escudos.png')),
+            Image(image: AssetImage('assets/fimeLogo.png')),
             SizedBox(
               child: Text(
                 'Universidad Autónoma de Nuevo León',
@@ -46,7 +45,7 @@ class PresentacionScreenView extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color(0x993DDC85),
+                color: Color.fromARGB(101, 61, 220, 133),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Padding(
