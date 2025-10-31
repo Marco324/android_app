@@ -1,6 +1,23 @@
+
+export 'package:android_app/presentation/views/capitulo1/android_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/arquitectura_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/clasificacion_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/funciones_caracteristicas.dart';
+export 'package:android_app/presentation/views/capitulo1/gestores_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/glosario_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/manejo_recursos_screen.dart';
+export 'package:android_app/presentation/views/capitulo1/utileria_screen.dart';
+export 'package:android_app/presentation/views/capitulo2/concurrencia_screen.dart';
+export 'package:android_app/presentation/views/capitulo2/hilos_screen.dart';
+export 'package:android_app/presentation/views/capitulo2/multiprocesamiento_screen.dart';
+export 'package:android_app/presentation/views/capitulo2/procesos_screen.dart';
+export 'package:android_app/presentation/views/capitulo2/tipos_proceso_interacciones_screen.dart';
+export 'package:android_app/presentation/views/capitulo3/administracion_memoria_screen.dart';
+export 'package:android_app/presentation/views/capitulo3/gestion_memoria_screen.dart';
+export 'package:android_app/presentation/views/capitulo3/problemas_memoria_screen.dart';
+export 'package:android_app/presentation/views/capitulo3/sistemas_archivos_screen.dart';
+export 'package:android_app/presentation/views/conclusiones_screen.dart';
+export 'package:android_app/presentation/views/fundamentales_screen.dart';
 export 'package:android_app/presentation/views/home_screen.dart';
-export 'package:android_app/presentation/views/android_screen.dart';
-export 'package:android_app/presentation/views/clasificacion_screen.dart';
-export 'package:android_app/presentation/views/componentes_screen.dart';
-export 'package:android_app/presentation/views/glosario_screen.dart';
 export 'package:android_app/presentation/views/presentacion_screen.dart';
+export 'package:android_app/presentation/views/referencias_screen.dart';

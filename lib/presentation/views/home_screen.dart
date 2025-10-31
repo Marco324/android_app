@@ -1,4 +1,3 @@
-import 'package:android_app/presentation/views/screens.dart';
 import 'package:android_app/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +7,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(title: 'Android', content: PresentacionScreenView());
+    return BaseScaffold(title: 'Android', content: HomeScreenView());
   }
 }
 
@@ -30,45 +29,151 @@ class HomeScreenView extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
+                      strokeAlign: BorderSide.strokeAlignInside,
                       color: Color.fromARGB(153, 61, 220, 133),
-                      width: 8,
+                      width: 14,
                     ),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 18, right: 18, top: 12, bottom: 20),
-                    child: Text(
-                      'El sistema operativo Android es el componente principal de cualquier dispositivo Android. Es el software que gestiona todas las funciones del dispositivo, desde la interfaz de usuario hasta la conectividad con las redes y el funcionamiento de las aplicaciones.',
+                    padding: const EdgeInsets.only(
+                      left: 18,
+                      right: 18,
+                      top: 12,
+                      bottom: 20,
+                    ),
+                    child: Text.rich(
                       style: textTheme.bodyLarge,
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Introducción\n\n',
+                            style: textTheme.titleLarge,
+                          ),
+                          TextSpan(
+                            text:
+                                'Este proyecto tiene como finalidad el desarrollo de una aplicación móvil haciendo uso del sistema operativo ',
+                          ),
+                          TextSpan(
+                            text: 'Android',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', esta aplicación busca no solo mostrar el funcionamiento práctico de una aplicación sino también profundizar e indagar en los principios técnicos que hacen posible la operación del sistema.\n\n',
+                          ),
+                          TextSpan(text: 'Como tal, '),
+                          TextSpan(
+                            text: 'Android',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ' es actualmente uno de los sistemas operativos más utilizados en el mundo, por las grandes ventajas que nos ofrece como su versatilidad, código abierto y compatibilidad con una amplia gama de dispositivos móviles. Detrás de la interfaz amigable que tiene ',
+                          ),
+                          TextSpan(
+                            text: 'Android',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ' se encuentra una compleja estructura que se basa en ',
+                          ),
+                          TextSpan(
+                            text: 'Linux',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', donde intervienen diversos elementos como el ',
+                          ),
+                          TextSpan(
+                            text: 'kernel',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', la gestión de memoria RAM, los procesos concurrentes y mecanismos de seguridad que protegen al usuario frente a amenazas como virus o malware.\n\n',
+                          ),
+                          TextSpan(
+                            text: 'Android',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text: ' destaca por implementar un modelo de ',
+                          ),
+                          TextSpan(
+                            text: 'arquitectura por capas',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', donde cada nivel cumple una función específica. En la base se encuentra el ',
+                          ),
+                          TextSpan(
+                            text: 'kernel de Linux',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', encargado de administrar los recursos fundamentales del dispositivo, como la CPU, la memoria y los controladores de hardware.\n\n',
+                          ),
+                          TextSpan(
+                            text:
+                                'A través de esta aplicación buscamos integrar los conocimientos teóricos adquiridos sobre ',
+                          ),
+                          TextSpan(
+                            text: 'sistemas operativos',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(text: ', '),
+                          TextSpan(
+                            text: 'arquitectura de software',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(text: ', '),
+                          TextSpan(
+                            text: 'seguridad informática',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(text: ' y '),
+                          TextSpan(
+                            text: 'programación concurrente',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text:
+                                ', aplicándolos en un entorno real y actual.',
+                          ),
+                        ],
+                      ),
                       textAlign: TextAlign.justify,
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: -2,
+                  bottom: 4,
                   right: 24,
                   child: Icon(
                     Icons.android,
                     color: Color.fromARGB(153, 61, 220, 133),
                     size: 40,
-                  )
-                )
+                  ),
+                ),
               ],
             ),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
             Divider(),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
             SizedBox(
               width: screenWidth,
-              child: Text('Datos Interesantes', style: textTheme.titleLarge, textAlign: TextAlign.start,)
+              child: Text(
+                'Datos Interesantes',
+                style: textTheme.titleLarge,
+                textAlign: TextAlign.start,
+              ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -84,9 +189,9 @@ class HomeScreenView extends StatelessWidget {
               imagen: Image(image: AssetImage('assets/robot.png')),
               rightImagen: -30,
             ),
-        
+
             SizedBox(height: 12),
-        
+
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -106,9 +211,9 @@ class HomeScreenView extends StatelessWidget {
               ),
               leftImagen: 10,
             ),
-        
+
             SizedBox(height: 12),
-        
+
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -124,9 +229,9 @@ class HomeScreenView extends StatelessWidget {
               imagen: Image(image: AssetImage('assets/linuxLogo.png')),
               rightImagen: -12,
             ),
-        
+
             SizedBox(height: 12),
-        
+
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -146,9 +251,9 @@ class HomeScreenView extends StatelessWidget {
               ),
               leftImagen: -18,
             ),
-        
+
             SizedBox(height: 12),
-        
+
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -164,9 +269,9 @@ class HomeScreenView extends StatelessWidget {
               imagen: Image(image: AssetImage('assets/ram.png')),
               rightImagen: -10,
             ),
-        
+
             SizedBox(height: 12),
-        
+
             PillModificado(
               screenWidth: screenWidth,
               color: const Color.fromARGB(86, 61, 220, 133),
@@ -183,7 +288,7 @@ class HomeScreenView extends StatelessWidget {
               imagen: Image(image: AssetImage('assets/cpu2.png'), width: 120),
               leftImagen: -3,
             ),
-        
+
             SizedBox(height: 36),
           ],
         ),
